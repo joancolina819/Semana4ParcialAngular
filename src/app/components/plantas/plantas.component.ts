@@ -13,7 +13,9 @@ export class PlantasComponent implements OnInit {
   constructor(private PlantaService: PlantaServiceService) { }
 
   getPlantaInfo() {
-    this.plantas= this.PlantaService.getPlantas()
+    this.PlantaService.getPlantas().subscribe(plantas => {
+      this.plantas = plantas;
+    });
     console.log(this.plantas)
   }
 
