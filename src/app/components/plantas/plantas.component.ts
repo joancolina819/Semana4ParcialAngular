@@ -11,7 +11,7 @@ export class PlantasComponent implements OnInit {
 
   plantas: Array<Planta> =[]
   plantasInterior:number=0
-  plantasexterior:number=0
+  plantasExterior:number=0
   constructor(private PlantaService: PlantaServiceService) { }
 
   getPlantaInfo() {
@@ -25,8 +25,8 @@ export class PlantasComponent implements OnInit {
     plantas.forEach((planta:Planta) => {
       if(planta.tipo === "Interior"){
         this.plantasInterior = this.plantasInterior+1;
-      }else{
-        this.plantasexterior = this.plantasexterior+1;
+      }else if(planta.tipo === "Exterior"){
+        this.plantasExterior = this.plantasExterior+1;
       }
   });
   }

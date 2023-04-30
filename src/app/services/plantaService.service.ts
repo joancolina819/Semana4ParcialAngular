@@ -13,9 +13,6 @@ export class PlantaServiceService {
 
   constructor(private http: HttpClient) { }
 
-  plantas:Array<Planta> = [
-    new Planta("1", "test1", "test2", "test3"),
-  ]
   getPlantas(): Observable<Planta[]> {
     return this.http.get<Planta[]>(this.apiUrl);
   }
