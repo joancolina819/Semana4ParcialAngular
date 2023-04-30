@@ -11,7 +11,7 @@ export class PlantaServiceService {
   plantas:Array<Planta> = [
     new Planta("1", "test1", "test2", "test3"),
   ]
-  getGeneros(): Array<Planta> {
+  getPlantas(): Array<Planta> {
     return this.plantas;
   }
 }
